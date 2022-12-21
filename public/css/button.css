@@ -1,0 +1,81 @@
+button#nice {
+  width: 50%;
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 3px;
+  height: 3em;
+  padding: 0 3em;
+  border: none;
+  background-color: rgb(9, 139, 9);
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#nice::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: rgb(9, 139, 9);
+  background: linear-gradient(90deg, rgb(9, 139, 9) 20%, rgb(7, 113, 7) 100%);
+  transition: 0.2s;
+}
+
+button#nice .label {
+  position: relative;
+}
+
+button#nice .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+button#nice:hover::before {
+  height: 100%;
+}
+
+button#nice:hover .icon {
+  top: 0;
+  opacity: 1;
+}
+
+/* Button Submit */
+button#submit {
+  position: relative;
+  padding: 10px 40px;
+  margin: 16px;
+  float: left;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #2ecc71;
+  border: none;
+  border-bottom: 5px solid #27ae60;
+  text-shadow: 0px -2px #27ae60;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+button#submit:hover,
+button#submit:active {
+  -webkit-transform: translate(0px, 5px);
+  -ms-transform: translate(0px, 5px);
+  transform: translate(0px, 5px);
+  border-bottom: 1px solid #2ecc71;
+}

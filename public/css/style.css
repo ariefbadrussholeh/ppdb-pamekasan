@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+}
+
+img {
+  margin-right: 16px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(9, 139, 9);
+  transition: 0.5s;
+}
+
+.hero {
+  width: 100%;
+  height: 90%;
+  border-radius: 25px;
+  background: url(../img/bg-sekolah.jpg) no-repeat;
+  background-color: rgba(0, 0, 0, 0.65);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-start {
+  display: flex;
+  justify-content: center;
+}
+
+.hero div {
+  text-align: center;
+  color: white;
+  filter: brightness(100%);
+}
+.hero div p {
+  margin: 16px 0;
+}
+
+.clock {
+  position: absolute;
+  top: 100px;
+  font-size: 1.5em;
+}
+
+main {
+  background-color: rgb(236, 236, 236);
+  height: 100%;
+  padding: 32px;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+main div {
+  width: 80vh;
+}
+
+main div#table {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label,
+input,
+select {
+  display: block;
+  width: 100%;
+}
+
+input,
+select,
+.radio-group {
+  margin-bottom: 8px;
+}
+
+label {
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  font-family: inherit;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 2px solid rgb(236, 236, 236);
+  cursor: pointer;
+}
+
+input:hover,
+select:hover {
+  border: 2px solid black;
+  transition: 0.5s;
+}
+
+.radio-group {
+  margin: 32px 0;
+}
+
+.radio-group label,
+.radio-group input,
+.radio-group p {
+  width: fit-content;
+  display: inline;
+  margin-right: 16px;
+  accent-color: rgb(9, 139, 9);
+  cursor: pointer;
+}
+
+.radio-group p {
+  margin-right: 72px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 25px;
+}
+th,
+td {
+  padding: 8px 16px;
+}
+td {
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #889096;
+}
+th {
+  background: rgb(60, 137, 60);
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+form {
+  padding: 24px;
+}
+
+.hidden {
+  display: none;
+}
