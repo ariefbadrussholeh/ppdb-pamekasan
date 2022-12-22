@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Des 2022 pada 00.45
+-- Waktu pembuatan: 22 Des 2022 pada 02.23
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -33,17 +33,19 @@ CREATE TABLE `calon_siswa` (
   `alamat` varchar(256) NOT NULL,
   `jenis_kelamin` varchar(9) NOT NULL,
   `agama` varchar(8) NOT NULL,
-  `sekolah_asal` varchar(64) NOT NULL
+  `sekolah_asal` varchar(64) NOT NULL,
+  `foto` varchar(128) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `calon_siswa`
 --
 
-INSERT INTO `calon_siswa` (`id`, `nama`, `alamat`, `jenis_kelamin`, `agama`, `sekolah_asal`) VALUES
-('CS0001', 'Arief Badrus Sholeh', 'Pamekasan, Madura', 'Laki-laki', 'Islam', 'SMPN 1 Pademawu'),
-('CS0002', 'Muhammad Ali', 'Pamekasan, Madura', 'Laki-laki', 'Islam', 'SMPN 1 Pamekasan'),
-('CS0003', 'Christiano Ronaldo', 'Portugal', 'Laki-laki', 'Kristen', 'SMPN 1 Portugal');
+INSERT INTO `calon_siswa` (`id`, `nama`, `alamat`, `jenis_kelamin`, `agama`, `sekolah_asal`, `foto`) VALUES
+('CS0001', 'Arief Badrus Sholeh', 'Pamekasan, Madura', 'Laki-laki', 'Islam', 'SMP 1 Pamekasan', 'photo_CS0001.jpg'),
+('CS0002', 'Ronaldo', 'Portugal', 'Laki-laki', 'Kristen', 'SMP 1 Portugal', 'photo_CS0002.jpg'),
+('CS0003', 'Messi', 'Argentina', 'Laki-laki', 'Kristen', 'SMP 1 Argentina', 'photo_CS0003.jpg'),
+('CS0004', 'Kobe Bryant', 'America', 'Laki-laki', 'Kristen', 'SMP 1 America', 'photo_CS0004.jpg');
 
 --
 -- Indexes for dumped tables
