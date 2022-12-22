@@ -12,7 +12,16 @@
   $religion = $_POST['religion'];
   $previous_school = $_POST['previous-school'];
 
-  $insert_query = "INSERT INTO calon_siswa (id, nama, alamat, jenis_kelamin, agama, sekolah_asal) VALUES ('$id', '$name', '$address', '$sex', '$religion', '$previous_school')";
+  $tmp_loc = $_FILES['photo']['tmp_name'];
+  $path = $_FILES['photo']['name'];
+  $ext = pathinfo($path, PATHINFO_EXTENSION);
+
+  $photo = "photo_".$id.".".$ext;
+
+  $target_path = "../storage/";
+  move_uploaded_file($tmp_loc, $target_path.$photo);
+
+  $insert_query = "INSERT INTO calon_siswa (id, nama, alamat, jenis_kelamin, agama, sekolah_asal, foto) VALUES ('$id', '$name', '$address', '$sex', '$religion', '$previous_school', '$photo')";
   $insert = mysqli_query($conn, $insert_query);
 
   if ($insert){

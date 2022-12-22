@@ -12,7 +12,18 @@
   $religion = $_POST['religion'];
   $previous_school = $_POST['previous-school'];
 
-  $update_query = "UPDATE calon_siswa SET nama='$name', alamat='$address', jenis_kelamin='$sex', agama='$religion', sekolah_asal='$previous_school' WHERE id='$id'";
+  var_dump($_FILES);
+
+  $tmp_loc = $_FILES['photo']['tmp_name'];
+  $path = $_FILES['photo']['name'];
+  $ext = pathinfo($path, PATHINFO_EXTENSION);
+
+  $photo = "photo_".$id.".".$ext;
+
+  $target_path = "../storage/";
+  move_uploaded_file($tmp_loc, $target_path.$photo);
+
+  $update_query = "UPDATE calon_siswa SET nama='$name', alamat='$address', jenis_kelamin='$sex', agama='$religion', sekolah_asal='$previous_school', foto='$photo' WHERE id='$id'";
   $update = mysqli_query($conn, $update_query);
 
   if ($update){

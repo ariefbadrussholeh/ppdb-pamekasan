@@ -37,10 +37,15 @@
         </li>
       </ul>
     </header>
-    <main class="flex-center-start">
-      <div>
-        <h2>Daftar</h2>
-        <form action="./backend/proses-pendaftaran.php" method="post" name="submit">
+    <main>
+      <h2>Daftar</h2>
+      <div class="container">
+        <div class="upload-photos" id="upload-photos">
+          <img src="./public/img/User Logo.svg" alt="">
+          <p id="title">Masukkan foto anda</p>
+        </div>
+        <form action="./backend/proses-pendaftaran.php" method="post" enctype="multipart/form-data" name="submit">
+          <input type="file" name="photo" id="photo" accept="image/png, image/jpeg" class="hidden" required>
           <label for="name">Nama</label>
           <input type="text" name="name" id="name" placeholder="Masukkan nama lengkap anda" autocomplete="off" autofocus required />
           <label for="address">Alamat</label>
@@ -88,5 +93,6 @@
         });
       }
     </script>
+    <script src="./public/js/drop-photo.js"></script>
   </body>
 </html>

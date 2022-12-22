@@ -42,7 +42,7 @@
           <h3>di Portal Penerimaan Peserta Didik Baru (PPDB)</h3>
           <h4>Kabupaten Pamekasan Tahun 2022</h4>
           <p>Pendaftaran PPDB Kabupaten Pamekasan dapat dilakukan pada tanggal 22 - 30 Desember 2022</p>
-          <form action="./daftar-baru.php" method="post">
+          <form action="./daftar-baru.php" method="post" id="button">
             <button id="nice">
               <span class="label">Daftar</span>
               <span class="icon">

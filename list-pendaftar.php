@@ -55,6 +55,7 @@ while($row = mysqli_fetch_assoc($get)){
         <table>
           <thead>
             <th>Id</th>
+            <th>Foto</th>
             <th>Nama</th>
             <th>Alamat</th>
             <th>Jenis Kelamin</th>
@@ -66,6 +67,7 @@ while($row = mysqli_fetch_assoc($get)){
             <?php foreach ($calon_siswa as $row) : ?>
               <tr>
                 <td class="text-center"><?= $row['id'] ?></td>
+                <td><img src="./storage/<?= $row['foto'] ?>" alt="" width="50px" height="75px"></td>
                 <td><?= $row['nama'] ?></td>
                 <td><?= $row['alamat'] ?></td>
                 <td class="text-center"><?= $row['jenis_kelamin'] ?></td>
@@ -90,7 +92,7 @@ while($row = mysqli_fetch_assoc($get)){
 
         Swal.fire({
             icon: "warning",
-            title: "Anda yakin ingin submit?",
+            title: "Anda yakin ingin hapus?",
             showDenyButton: true,
             confirmButtonText: "Iya",
             denyButtonText: `Tidak`,
